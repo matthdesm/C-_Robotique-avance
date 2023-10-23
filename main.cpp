@@ -6,7 +6,6 @@
 
 using namespace::std ;
 
-//with github
 
 int main() {
 
@@ -30,6 +29,15 @@ int main() {
     obstacles.push_back(Coordonnees(x, y) ) ;
     environnement.Obstacles = obstacles ;
     */
+
+    int taille;
+    std::cout << "Choisissez le taille de l'environnement " << " : ";
+    std::cin >> taille ;
+    std::string name = "Environnement" ; 
+    Environnement environnement(name);
+    environnement.initialise_environnement(taille);
+    environnement.deployer();
+
     Robot myrobot ;
     myrobot.position.x = 0;
     myrobot.position.y = 0;

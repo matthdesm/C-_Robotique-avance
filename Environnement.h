@@ -3,6 +3,8 @@
 #include <iostream>
 #include <vector>
 #include "coordonnees.h"
+#include <random>
+#include <list>
 
 using namespace::std ;
 
@@ -11,9 +13,11 @@ class Environnement
     public : 
     Environnement(std::string name);
     std::string name ;
-    vector<Coordonnees> Obstacles;
+    list<Coordonnees> Obstacles;
     Coordonnees coordonnees_max;
-    void initialise_environnement();
+    void initialise_environnement(int taille);
+    void deployer();
+    int nb_obstacles;
 
 };
  
